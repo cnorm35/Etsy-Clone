@@ -1,3 +1,4 @@
+source "https://code.stripe.com"
 source 'https://rubygems.org'
 
 
@@ -25,6 +26,7 @@ gem 'paperclip'
 gem 'paperclip-dropbox'
 gem 'figaro'
 gem 'devise'
+gem 'stripe'
 
 
 

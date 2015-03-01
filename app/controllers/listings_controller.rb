@@ -7,7 +7,7 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all
+    @listings = Listing.all.order("created_at DESC")
   end
 
   # GET /listings/1
@@ -63,6 +63,10 @@ class ListingsController < ApplicationController
       format.html { redirect_to listings_url, notice: 'Listing was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def seller 
+    @listings = Listing.where(user: current_user).order("created_at DESC")
   end
 
   private

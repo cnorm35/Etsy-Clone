@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <div class="row">
   <div class="col-md-6">
     <div class="thumbnail">
@@ -10,6 +8,10 @@
     <h3><%= @listing.name %></h3>
     <p><%= number_to_currency(@listing.price)%></p>
     <p><%= @listing.description %></p>
+    <br>
+    <div class="center">
+      <%= link_to "Buy It Now", new_listing_order_path(@listing), class: "btn btn-info" %>
+    </div>
   </div>
 </div>
 
